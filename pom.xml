@@ -29,25 +29,10 @@
 
   <!-- build 标签：意思是告诉 Maven，你的构建行为，我要开始定制了！ -->
   <build>
-    <!-- plugins 标签：Maven 你给我听好了，你给我构建的时候要用到这些插件！ -->
     <plugins>
-      <!-- plugin 标签：这是我要指定的一个具体的插件 -->
       <plugin>
-        <!-- 插件的坐标。此处引用的 maven-compiler-plugin 插件不是第三方的，是一个 Maven 自带的插件。 -->
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-
-        <!-- configuration 标签：配置 maven-compiler-plugin 插件 -->
-        <configuration>
-          <!-- 具体配置信息会因为插件不同、需求不同而有所差异 -->
-          <!-- 发行版本代码编写的jdk版本 -->
-          <source>1.8</source>
-          <!-- 发行版本环境JVM的jdk版本 -->
-          <!-- source和target一致即可 -->
-          <target>1.8</target>
-          <encoding>UTF-8</encoding>
-        </configuration>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
